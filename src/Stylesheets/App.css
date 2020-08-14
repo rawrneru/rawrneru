@@ -104,7 +104,7 @@ p {
   padding: 2rem;
   box-shadow: 0.3rem 0.3rem 2rem rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
-  transition: background 200ms;
+  transition: background 200ms, transform 200ms;
 }
 
 .card h1 {
@@ -131,4 +131,5 @@ p {
 
 .card:hover {
   transform: translateY(-0.2rem);
+  transition: transform 200ms;
 }
