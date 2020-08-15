@@ -12,7 +12,7 @@ export default function CardElement({ size, title, info, icon }) {
           <p>{info}</p>
         </div>
       </div>
-      <FontAwesomeIcon icon={icon} size="3x" color="var(--main-text)" />
+      <FontAwesomeIcon icon={icon} size="3x" color="var(--background)" />
     </div>
   );
 }
