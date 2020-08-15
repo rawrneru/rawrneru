@@ -1,6 +1,12 @@
 import React from "react";
 import profile_pic from "../Media/profile-pic.png";
 import CardElement from "./Templates/CardElement";
+import {
+  faTwitter,
+  faTwitch,
+  faYoutube,
+  faDiscord,
+} from "@fortawesome/fontawesome-free-brands";
 
 export default function Homepage() {
   return (
@@ -16,9 +22,28 @@ export default function Homepage() {
       </div>
       <div className="card-container">
         <CardElement
-          title="work in progress.."
-          info="i'm working on it!"
+          title="twitter"
+          info="shitposting"
           size="small"
+          icon={faTwitter}
+        />
+        <CardElement
+          title="twitch"
+          info="video gaming"
+          size="small"
+          icon={faTwitch}
+        />
+        <CardElement
+          title="youtube"
+          info="content uploading"
+          size="small"
+          icon={faYoutube}
+        />
+        <CardElement
+          title="discord"
+          info="social interaction"
+          size="small"
+          icon={faDiscord}
         />
       </div>
     </div>

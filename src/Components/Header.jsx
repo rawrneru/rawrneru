@@ -2,10 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-function menuClick() {
-  return alert("chill bro let me finish the website first");
-}
-
 function themeToggle() {
   if (current_mode) {
     document.documentElement.style = `--text: ${dark_mode.blue}; --banner: ${dark_mode.gray}; --background: ${dark_mode.black}; --header-text: ${dark_mode.blue}; --main-text: ${dark_mode.blue}`;
@@ -14,6 +10,14 @@ function themeToggle() {
   }
 
   current_mode = !current_mode;
+}
+
+function themeOnLoad() {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  )
+    return themeToggle();
 }
 
 let current_mode = true;
@@ -30,9 +34,11 @@ let dark_mode = {
   gray: "#292f36",
 };
 
+themeOnLoad();
+
 export default function Header() {
   return (
-    <div className="Header" onLoad={themeToggle}>
+    <div className="Header">
       <div className="header-title">
         <div className="icon-menu" onClick={themeToggle}>
           <FontAwesomeIcon icon={faBars} size="2x" color="var(--text)" />
