@@ -5,6 +5,7 @@ export default function CardElement({ size, title, info, icon, link }) {
   return (
     <a href={link}>
       <div className={`card card-${size}`}>
+        <FontAwesomeIcon icon={icon} size="3x" color="var(--background)" />
         <div className="card-text">
           <div className="card-title">
             <h1>{title}</h1>
@@ -13,7 +14,6 @@ export default function CardElement({ size, title, info, icon, link }) {
             <p>{info}</p>
           </div>
         </div>
-        <FontAwesomeIcon icon={icon} size="3x" color="var(--background)" />
       </div>
     </a>
   );

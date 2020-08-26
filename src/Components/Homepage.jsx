@@ -7,6 +7,7 @@ import {
   faYoutube,
   faDiscord,
 } from "@fortawesome/fontawesome-free-brands";
+import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Homepage() {
   return (
@@ -41,6 +42,13 @@ export default function Homepage() {
           size="small"
           icon={faYoutube}
           link="https://www.youtube.com/channel/UCEfmljfyo9QZt-w10QJLoKw"
+        />
+        <CardElement
+          title="osu!"
+          info="circle clicking"
+          size="small"
+          icon={faDotCircle}
+          link="https://osu.ppy.sh/users/5134380"
         />
         <CardElement
           title="discord"

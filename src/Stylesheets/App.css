@@ -23,7 +23,7 @@ body {
   font-family: "Alata", sans-serif;
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
+  text-transform: lowercase;
   user-select: none;
 }
 
@@ -120,23 +120,27 @@ a {
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  margin: -4rem 10% 0 10%;
+  margin: -3.4rem 0 0 0;
 }
 
 .card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   background: var(--main-text);
   margin: 0.4rem;
-  padding: 2rem;
-  min-width: 18rem;
-  max-width: 18rem;
+  padding: 1.4rem;
+  min-width: 16rem;
+  max-width: 16rem;
   border-radius: 0.2rem;
   transition: transform 200ms cubic-bezier(0.1, 0, 0.1, 1),
     box-shadow 200ms cubic-bezier(0.1, 0, 0.1, 1),
     filter 200ms cubic-bezier(0.1, 0, 0.1, 1),
     background 200ms cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.card svg {
+  margin-right: 1rem;
 }
 
 .card h1 {
@@ -182,9 +186,14 @@ a {
 }
 
 @media only screen and (max-width: 1080px) {
+
   #root,
   .App {
-    min-height: 100%;
+    min-height: 100vh;
+  }
+
+  .card-container {
+    padding-bottom: 6rem;
   }
 
   .banner {
