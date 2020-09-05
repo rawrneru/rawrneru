@@ -1,0 +1,69 @@
+.pfl-container {
+  margin: auto;
+  width: 100%;
+}
+
+.pfl-header {
+  color: var(--main-text);
+  font-size: 3rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.pfl-title,
+.pfl-subtitle {
+  color: var(--text);
+}
+
+.pfl-card {
+  width: 90%;
+  margin: 0 auto 2rem;
+  color: var(--text);
+  border-radius: 0.2rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 100ms cubic-bezier(0.1, 0, 0.1, 1),
+    box-shadow 100ms cubic-bezier(0.1, 0, 0.1, 1),
+}
+
+.pfl-card-inner {
+  padding: 2rem 2rem;
+  border-radius: 0.2rem;
+}
+
+.pfl-card-inner#ferthrum,
+.pfl-card-inner#valholl {
+  backdrop-filter: sepia(1) hue-rotate(190deg) brightness(20%);
+  transition: backdrop-filter 100ms cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.pfl-card-inner#ferthrum:hover,
+.pfl-card-inner#valholl:hover {
+  backdrop-filter: sepia(0) hue-rotate(0deg);
+  transition: backdrop-filter 100ms cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.pfl-card h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.pfl-card p {
+  padding-bottom: 0.4rem;
+}
+
+.pfl-card:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 100ms cubic-bezier(0.1, 0, 0.1, 1),
+    box-shadow 100ms cubic-bezier(0.1, 0, 0.1, 1),
+}
+
+.pfl-card:active {
+  transform: translateY(0.1rem);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: transform 100ms cubic-bezier(0.1, 0, 0.1, 1),
+    box-shadow 100ms cubic-bezier(0.1, 0, 0.1, 1),
+}

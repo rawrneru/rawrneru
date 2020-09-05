@@ -15,11 +15,13 @@
 
 #root {
   background: var(--background);
-  transition: background 200ms;
+  transition: background 100ms;
 }
 
 html,
 body {
+  background: var(--background);
+  transition: background 100ms;
   font-family: "Alata", sans-serif;
   margin: 0;
   padding: 0;
@@ -32,202 +34,15 @@ p {
   margin: 0;
   padding: 0;
   vertical-align: middle;
-  transform: translateY(-0.25rem);
-  transition-duration: 200ms;
+  transition-duration: 100ms;
   transition-timing-function: cubic-bezier(0.1, 0, 0.1, 1);
 }
 
-a {
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
   text-decoration: none;
-}
-
-.Header {
-  transition: background 200ms cubic-bezier(0.1, 0, 0.1, 1);
-  position: absolute;
-  width: 100%;
-}
-
-.header-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 98%;
-  margin: 0 auto;
-  transition: background 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.header-title h1 {
-  color: var(--text);
-  margin: 0.5rem 0 0.6rem 2rem;
-  font-size: 2rem;
-}
-
-.icon-menu svg,
-.card svg {
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.icon-menu {
-  transition: transform 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    box-shadow 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.banner {
-  background: var(--banner);
-  display: flex;
-  width: 98vw;
-  height: 44rem;
-  margin: 0 auto;
-  align-items: center;
-  overflow: hidden;
-  border-bottom-left-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
-  transition: background 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.banner img {
-  width: 16rem;
-  height: 16rem;
-  padding: 1rem;
-  border-radius: 50%;
-  transition: border 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.banner-image {
-  margin-left: 4rem;
-  border-radius: 50%;
-  border: 0.6rem solid var(--text);
-  transition: border 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    transform 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    box-shadow 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.banner-title {
-  color: var(--text);
-  margin-left: 4rem;
-}
-
-.banner-title h1 {
-  font-size: 6rem;
-  text-align: center;
-}
-
-.banner-title p {
-  font-size: 2rem;
-}
-
-.card-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: -3.4rem 0 0 0;
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  background: var(--main-text);
-  margin: 0.4rem;
-  padding: 1.4rem;
-  min-width: 16rem;
-  max-width: 16rem;
-  border-radius: 0.2rem;
-  transition: transform 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    box-shadow 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    filter 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    background 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.card svg {
-  margin-right: 1rem;
-}
-
-.card h1 {
-  color: var(--background);
-  font-size: 2rem;
-}
-
-.card p {
-  color: var(--background);
-  font-size: 1rem;
-}
-
-.card.card-small {
-  flex-grow: 1;
-}
-
-.card.card-normal {
-  flex-grow: 2;
-}
-
-.card.card-large {
-  flex-grow: 4;
-}
-
-.card:hover,
-.icon-menu:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-  filter: brightness(110%);
-  transition: transform 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    box-shadow 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    filter 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-.card:active,
-.icon-menu:active {
-  transform: translateY(0.1rem);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  filter: brightness(90%);
-  transition: transform 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    box-shadow 200ms cubic-bezier(0.1, 0, 0.1, 1),
-    filter 200ms cubic-bezier(0.1, 0, 0.1, 1);
-}
-
-@media only screen and (max-width: 1080px) {
-
-  #root,
-  .App {
-    min-height: 100vh;
-  }
-
-  .card-container {
-    padding-bottom: 6rem;
-  }
-
-  .banner {
-    padding-top: 6rem;
-    flex-flow: column;
-    width: 100%;
-    border-bottom-left-radius: 0rem;
-    border-bottom-right-radius: 0rem;
-    height: 34rem;
-  }
-
-  .banner-title {
-    margin-left: 0;
-  }
-
-  .banner img {
-    width: 12rem;
-    height: 12rem;
-  }
-
-  .banner-image {
-    margin-left: 0;
-    margin-bottom: 2rem;
-  }
-
-  .banner-title h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .banner-title p {
-    font-size: 2rem;
-    text-align: center;
-  }
 }

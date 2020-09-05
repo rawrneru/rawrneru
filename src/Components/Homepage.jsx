@@ -1,6 +1,7 @@
 import React from "react";
 import profile_pic from "../Media/profile-pic.png";
 import CardElement from "./Templates/CardElement";
+import PortfolioElement from "./Templates/PortfolioElement";
 import {
   faTwitter,
   faTwitch,
@@ -57,6 +58,21 @@ export default function Homepage() {
           icon={faDiscord}
           link="https://discord.com/invite/N3mHtrm"
         />
+      </div>
+      <div className="pfl-container">
+        <h1 className="pfl-header">personal projects</h1>
+        <PortfolioElement
+          title="ferthrum"
+          subtitle="myriad collection"
+          link="https://streamable.com/0j36kj"
+          background="https://i.gyazo.com/75317ef58ca0ef324aaf8fb3b9edcaab.png"
+        ></PortfolioElement>
+        <PortfolioElement
+          title="valholl"
+          subtitle="project valholl"
+          link="https://streamable.com/irst7w"
+          background="https://i.gyazo.com/e81c46be1e599d4c20619a2ea6c1480c.png"
+        ></PortfolioElement>
       </div>
     </div>
   );

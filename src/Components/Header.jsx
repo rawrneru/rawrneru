@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faPalette } from "@fortawesome/free-solid-svg-icons";
 
 function themeToggle() {
   if (current_mode) {
@@ -40,10 +40,13 @@ export default function Header() {
   return (
     <div className="Header">
       <div className="header-title">
-        <div className="icon-menu" onClick={themeToggle}>
-          <FontAwesomeIcon icon={faBars} size="2x" color="var(--text)" />
+        <div style={{ opacity: 0 }}>
+          <FontAwesomeIcon icon={faPalette} size="2x" color="var(--text)" />
         </div>
         <h1>wara works</h1>
+        <div className="icon-menu" onClick={themeToggle}>
+          <FontAwesomeIcon icon={faPalette} size="2x" color="var(--text)" />
+        </div>
       </div>
     </div>
   );

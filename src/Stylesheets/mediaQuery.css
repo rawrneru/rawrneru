@@ -1,0 +1,40 @@
+@media only screen and (max-width: 1080px) {
+
+  #root,
+  .App {
+    min-height: 100vh;
+  }
+
+  .banner {
+    padding-top: 6rem;
+    flex-flow: column;
+    width: 100%;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    height: 34rem;
+  }
+
+  .banner-title {
+    margin-left: 0;
+  }
+
+  .banner img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .banner-image {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .banner-title h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner-title p {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
